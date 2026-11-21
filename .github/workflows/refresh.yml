@@ -59,6 +59,10 @@ jobs:
           cp index.html _site/
           cp -r assets _site/assets
           cp dist/guild-fishing-board.html _site/
+          # GitHub Pages caches assets for 10 minutes, which can pair a new
+          # index.html with an old stylesheet. Version the URLs per deploy.
+          sed -E -i "s#assets/(style\.css|config\.js|data\.js|app\.js)#assets/\1?v=${GITHUB_RUN_ID}#g" _site/index.html
+          grep -o 'assets/[a-z.]*?v=[0-9]*' _site/index.html | head -4 || echo "warning: no versioned asset URLs found"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

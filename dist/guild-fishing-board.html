@@ -3,38 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guild Fishing Board — WoW Forever</title>
-<meta name="description" content="Fishing and cooking profit board for World of Warcraft Forever, built from ForeverEcon price scans.">
+<title>Hench 4 Life — Fishing Board | WoW Forever</title>
+<meta name="description" content="Hench 4 Life: the Monarch's fishing and cooking profit board for World of Warcraft Forever, built from ForeverEcon price scans.">
 <style>
+/* Hench 4 Life — Monarch theme.
+   Palette: cocoon purple, monarch orange, violet, cream.
+   Structure is unchanged: every class name the board's JS uses is preserved. */
+
 :root {
-  --bg: #0a0f14;
-  --panel: #121a22;
-  --panel-2: #172230;
-  --line: #24333f;
-  --text: #e6edf3;
-  --muted: #8fa3b4;
-  --gold: #e8c56a;
-  --green: #55d187;
-  --red: #f2757c;
-  --blue: #6ea8fe;
-  --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  --bg: #0b0611;
+  --panel: #170c20;
+  --panel-2: #21122e;
+  --line: #3a2150;
+  --text: #f5ecf8;
+  --muted: #b79bc8;
+  --gold: #ffb52e;
+  --orange: #ff8a1f;
+  --violet: #b388ff;
+  --green: #7fe0a0;
+  --red: #ff6f7d;
+  --shadow: 0 14px 34px rgba(0, 0, 0, .45);
   --radius: 12px;
+  /* faint butterfly wallpaper, drawn inline so the single-file build stays offline */
+  --wing-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 120 120'%3E%3Cg fill='%23ff8a1f' fill-opacity='0.04'%3E%3Cpath d='M58 60c-6-14-22-24-34-18-10 5-8 22 4 29 11 6 24 1 30-11z'/%3E%3Cpath d='M62 60c6-14 22-24 34-18 10 5 8 22-4 29-11 6-24 1-30-11z'/%3E%3Cpath d='M58 64c-5 11-16 20-26 17-8-2-8-14 1-19 9-5 19-3 25 2z' fill-opacity='0.5'/%3E%3Cpath d='M62 64c5 11 16 20 26 17 8-2 8-14-1-19-9-5-19-3-25 2z' fill-opacity='0.5'/%3E%3Cellipse cx='60' cy='62' rx='2.2' ry='12'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 * { box-sizing: border-box; }
 
 html, body {
   margin: 0;
-  background:
-    radial-gradient(1100px 500px at 15% -10%, #14212b 0%, transparent 60%),
-    radial-gradient(900px 420px at 90% 0%, #1a1b12 0%, transparent 55%),
-    var(--bg);
+  background-color: var(--bg);
+  background-image:
+    var(--wing-pattern),
+    radial-gradient(1200px 620px at 12% -12%, #32114a 0%, transparent 62%),
+    radial-gradient(900px 520px at 96% -4%, #431d05 0%, transparent 58%);
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size: 180px 180px, auto, auto;
+  background-attachment: fixed, fixed, fixed;
   color: var(--text);
   font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--blue); text-decoration: none; }
+::selection { background: rgba(255, 138, 31, .35); color: #fff; }
+
+a { color: var(--violet); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* ---------- header ---------- */
@@ -46,8 +59,9 @@ a:hover { text-decoration: underline; }
   flex-wrap: wrap;
   padding: 18px 22px;
   border-bottom: 1px solid var(--line);
-  background: rgba(10, 15, 20, .72);
-  backdrop-filter: blur(8px);
+  background: rgba(11, 6, 17, .78);
+  backdrop-filter: blur(9px);
+  box-shadow: 0 1px 0 rgba(255, 181, 46, .22);
   position: sticky;
   top: 0;
   z-index: 20;
@@ -56,15 +70,33 @@ a:hover { text-decoration: underline; }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand h1 {
   margin: 0;
-  font-size: 19px;
-  letter-spacing: .2px;
+  font-size: 20px;
+  letter-spacing: .4px;
+  text-shadow: 0 0 18px rgba(255, 138, 31, .28);
 }
 .sub { margin: 1px 0 0; color: var(--muted); font-size: 12.5px; }
+
+.butterfly {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 0 10px rgba(255, 138, 31, .35));
+  animation: float 7s ease-in-out infinite;
+}
+.butterfly .wing { fill: var(--gold); fill-opacity: .92; }
+.butterfly .wing.low { fill: var(--orange); fill-opacity: .85; }
+.butterfly .body { fill: #2a1030; }
+.butterfly .antenna { fill: none; stroke: var(--gold); stroke-width: 1.4; stroke-linecap: round; opacity: .9; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
 
 .pulse {
   width: 10px; height: 10px; border-radius: 50%;
   background: var(--muted);
-  box-shadow: 0 0 0 0 rgba(85, 209, 135, .55);
+  box-shadow: 0 0 0 0 rgba(127, 224, 160, .55);
 }
 .pulse.live {
   background: var(--green);
@@ -72,9 +104,9 @@ a:hover { text-decoration: underline; }
 }
 .pulse.stale { background: var(--gold); }
 @keyframes ping {
-  0% { box-shadow: 0 0 0 0 rgba(85, 209, 135, .5); }
-  70% { box-shadow: 0 0 0 9px rgba(85, 209, 135, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(85, 209, 135, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(127, 224, 160, .5); }
+  70% { box-shadow: 0 0 0 9px rgba(127, 224, 160, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(127, 224, 160, 0); }
 }
 
 .meta { text-align: right; font-size: 12.5px; color: var(--muted); }
@@ -88,7 +120,7 @@ main {
 }
 
 .panel {
-  background: var(--panel);
+  background: linear-gradient(180deg, rgba(33, 18, 46, .75), rgba(23, 12, 32, .95));
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -107,9 +139,10 @@ main {
 .panel h2 {
   margin: 0;
   font-size: 15.5px;
-  letter-spacing: .3px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--gold);
+  text-shadow: 0 0 16px rgba(255, 138, 31, .18);
 }
 .count { color: var(--muted); font-size: 12.5px; }
 
@@ -119,13 +152,14 @@ main {
   margin: 14px auto 0;
   padding: 11px 15px;
   border-radius: 10px;
-  border: 1px solid #5a4a1e;
-  background: linear-gradient(180deg, #2a2412, #1c1a10);
-  color: #f0dca4;
+  border: 1px solid #6b3a12;
+  background: linear-gradient(180deg, #2e1608, #1d0f14);
+  color: #ffd9a8;
   font-size: 13.5px;
+  box-shadow: inset 0 0 0 1px rgba(255, 138, 31, .08);
 }
 .banner.hidden { display: none; }
-.banner strong { color: #ffe9a8; }
+.banner strong { color: #ffc46b; }
 
 /* ---------- kpis ---------- */
 .kpis {
@@ -136,6 +170,7 @@ main {
 .kpi {
   background: linear-gradient(180deg, var(--panel-2), var(--panel));
   border: 1px solid var(--line);
+  border-top: 2px solid rgba(255, 181, 46, .5);
   border-radius: var(--radius);
   padding: 13px 15px;
   box-shadow: var(--shadow);
@@ -155,6 +190,7 @@ main {
   font-variant-numeric: tabular-nums;
   color: var(--gold);
   line-height: 1.15;
+  text-shadow: 0 0 18px rgba(255, 138, 31, .22);
 }
 .kpi .n { display: block; font-size: 12.5px; color: var(--muted); margin-top: 3px; }
 
@@ -187,7 +223,7 @@ main {
 
 select, input[type="search"] {
   appearance: none;
-  background: #0d151c;
+  background: #150a1e;
   color: var(--text);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -198,24 +234,25 @@ select, input[type="search"] {
 }
 input[type="search"] { padding-right: 10px; min-width: 190px; }
 select:focus, input:focus, .btn:focus-visible {
-  outline: 2px solid rgba(110, 168, 254, .55);
+  outline: 2px solid rgba(255, 138, 31, .55);
   outline-offset: 1px;
 }
 
 .btn {
-  background: linear-gradient(180deg, #2b3d4d, #1d2a36);
+  background: linear-gradient(180deg, #3b1b55, #24102f);
   color: var(--text);
-  border: 1px solid #35506a;
+  border: 1px solid #6a3a92;
   border-radius: 8px;
   padding: 9px 14px;
   font: inherit;
   font-size: 13.5px;
   cursor: pointer;
-  transition: transform .06s ease, filter .15s ease;
+  transition: transform .06s ease, filter .15s ease, border-color .15s ease;
 }
-.btn:hover { filter: brightness(1.14); }
+.btn:hover { filter: brightness(1.16); border-color: var(--orange); }
 .btn:active { transform: translateY(1px); }
 .btn.ghost { background: transparent; border-color: var(--line); color: var(--muted); }
+.btn.ghost:hover { color: var(--gold); border-color: rgba(255, 181, 46, .5); }
 
 .hint { color: var(--muted); font-size: 12.5px; margin: 10px 2px 0; }
 
@@ -232,24 +269,25 @@ thead th {
   position: sticky;
   top: 0;
   z-index: 2;
-  background: #16212c;
-  color: var(--muted);
+  background: linear-gradient(180deg, #2a1240, #1d0f2b);
+  color: #d6b8ea;
   font-size: 11px;
   letter-spacing: .7px;
   text-transform: uppercase;
   font-weight: 600;
   padding: 10px 11px;
   border-bottom: 1px solid var(--line);
+  box-shadow: inset 0 -2px 0 rgba(255, 181, 46, .28);
   white-space: nowrap;
 }
 
 tbody td {
   padding: 10px 11px;
-  border-bottom: 1px solid #1c2833;
+  border-bottom: 1px solid #271538;
   vertical-align: middle;
   font-size: 13.5px;
 }
-tbody tr:hover { background: #16222d; }
+tbody tr:hover { background: #261433; }
 tbody tr:last-child td { border-bottom: 0; }
 
 .r { text-align: right; font-variant-numeric: tabular-nums; }
@@ -274,15 +312,15 @@ tbody tr:last-child td { border-bottom: 0; }
   color: var(--muted);
   white-space: nowrap;
 }
-.chip.gold { color: #1a1405; background: var(--gold); border-color: var(--gold); }
-.chip.green { color: #06210f; background: var(--green); border-color: var(--green); }
-.chip.blue { color: #04121f; background: var(--blue); border-color: var(--blue); }
-.chip.grey { color: var(--muted); }
+.chip.gold { color: #1a1200; background: linear-gradient(180deg, #ffc65a, #ffa41f); border-color: #ffa41f; }
+.chip.green { color: #04200f; background: var(--green); border-color: var(--green); }
+.chip.blue { color: #14062a; background: var(--violet); border-color: var(--violet); }
+.chip.grey { color: var(--muted); background: #1a0e26; }
 .chip.red { color: #2b0508; background: var(--red); border-color: var(--red); }
-.chip.skill { background: #0d151c; }
+.chip.skill { background: #1a0e26; border-color: #4a2a66; color: #d9c2ea; }
 
 .fineprint { color: var(--muted); font-size: 12px; margin: 12px 2px 0; max-width: 900px; }
-.fineprint em { color: #c4d3df; font-style: normal; }
+.fineprint em { color: #e6cff5; font-style: normal; }
 
 /* ---------- zones ---------- */
 .zones {
@@ -291,8 +329,9 @@ tbody tr:last-child td { border-bottom: 0; }
   gap: 12px;
 }
 .zone {
-  background: var(--panel-2);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
   border: 1px solid var(--line);
+  border-top: 2px solid rgba(255, 138, 31, .4);
   border-radius: 10px;
   padding: 13px 14px;
 }
@@ -305,7 +344,7 @@ tbody tr:last-child td { border-bottom: 0; }
   gap: 8px;
 }
 .zone .hub { color: var(--muted); font-size: 12.5px; margin: 0 0 8px; }
-.zone .note { color: #c4d3df; font-size: 12.5px; margin: 8px 0 0; }
+.zone .note { color: #e0c9f0; font-size: 12.5px; margin: 8px 0 0; }
 .zone ul {
   list-style: none;
   margin: 8px 0 0;
@@ -320,13 +359,13 @@ tbody tr:last-child td { border-bottom: 0; }
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 2px 6px;
-  background: #0d151c;
+  background: #150a1e;
 }
 .zone li b { color: var(--text); font-weight: 600; }
 
 /* ---------- traps ---------- */
 .traps { margin: 0; padding-left: 20px; }
-.traps li { margin: 7px 0; color: #cfd9e2; font-size: 13.5px; }
+.traps li { margin: 7px 0; color: #e4d2f0; font-size: 13.5px; }
 .traps li b { color: var(--gold); }
 
 /* ---------- footer ---------- */
@@ -339,6 +378,13 @@ footer {
   padding-top: 14px;
 }
 footer p { margin: 4px 0; }
+.motto {
+  color: var(--gold);
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  font-size: 11px;
+  opacity: .9;
+}
 
 /* ---------- toast ---------- */
 .toast {
@@ -346,9 +392,9 @@ footer p { margin: 4px 0; }
   left: 50%;
   bottom: 24px;
   transform: translate(-50%, 20px);
-  background: #223243;
+  background: #2a1440;
   color: var(--text);
-  border: 1px solid #35506a;
+  border: 1px solid #6a3a92;
   border-radius: 9px;
   padding: 10px 16px;
   font-size: 13px;
@@ -374,33 +420,46 @@ footer p { margin: 4px 0; }
   tbody td { padding: 9px 8px; }
 }
 
-/* Tablet / narrow laptop: drop Cooked and Market/day so the row fits without a scrollbar */
+/* Tablet / narrow laptop: drop Cooked and Market/day, tighten the rest so the verdict stays visible */
 @media (max-width: 980px) {
-  table { min-width: 600px; }
-  .fate { white-space: normal; min-width: 132px; }
-  .where { max-width: 170px; }
+  table { min-width: 540px; }
+  .fate { white-space: normal; min-width: 104px; }
+  .where { max-width: 118px; }
+  tbody td { padding: 9px 7px; }
   #plays th:nth-child(6), #plays td:nth-child(6),
   #plays th:nth-child(9), #plays td:nth-child(9) { display: none; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .butterfly, .pulse.live { animation: none; }
+}
+
 @media print {
   body { background: #fff; color: #000; }
-  .controls, .btn, .top, footer { display: none; }
+  .controls, .btn, .top, footer, .butterfly { display: none; }
   .panel { box-shadow: none; border-color: #ccc; }
 }
 
 </style>
-<meta name="generator" content="guild-fishing-board (single file, built 2026-11-21 00:20 UTC)">
+<meta name="generator" content="guild-fishing-board (single file, built 2026-11-21 00:25 UTC)">
 </head>
 <body>
 
 <header class="top">
   <div class="brand">
-    <span class="pulse" id="pulse" title="Data loaded"></span>
+    <svg class="butterfly" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+      <path class="wing" d="M30 31C24 19 10 11 2 17c-7 5-4 19 6 24 8 4 17 1 22-8z"/>
+      <path class="wing" d="M34 31c6-12 20-20 28-14 7 5 4 19-6 24-8 4-17 1-22-8z"/>
+      <path class="wing low" d="M31 35c-4 9-12 16-19 13-6-3-5-11 2-15 6-4 12-2 17 2z"/>
+      <path class="wing low" d="M33 35c4 9 12 16 19 13 6-3 5-11-2-15-6-4-12-2-17 2z"/>
+      <ellipse class="body" cx="32" cy="32" rx="1.8" ry="9"/>
+      <path class="antenna" d="M31 23c-1-5-4-8-7-9M33 23c1-5 4-8 7-9"/>
+    </svg>
     <div>
-      <h1>Guild Fishing Board</h1>
-      <p class="sub" id="guildTag">WoW Forever · fishing + cooking</p>
+      <h1 id="boardTitle">Hench 4 Life</h1>
+      <p class="sub" id="guildTag">The Monarch's fishing board · WoW Forever</p>
     </div>
+    <span class="pulse" id="pulse" title="Data loaded"></span>
   </div>
   <div class="meta">
     <strong id="marketLabel">Normal Alliance US</strong>
@@ -508,6 +567,7 @@ footer p { margin: 4px 0; }
       Zone loot and skill requirements are original-game data, not re-verified in Forever.
       No drop rates are published anywhere, so this board never invents gold-per-hour.
     </p>
+    <p class="motto">Henchmen, not minions.</p>
     <p id="buildInfo"></p>
   </footer>
 </main>
@@ -515,7 +575,9 @@ footer p { margin: 4px 0; }
 <script>
 /* Guild-specific settings. Edit this file; it is never overwritten by a refresh. */
 window.BOARD_CONFIG = {
-  guildName: "Your Guild",
+  // The monarch's own crew.
+  guildName: "Hench 4 Life",
+  tagline: "The Monarch's fishing board · WoW Forever",
   market: "Normal Alliance US",
   // Where you actually sell. Capital = 5% cut, goblin houses = 15%.
   defaultCut: 5,
@@ -750,7 +812,9 @@ window.FOREVER_DATA = {"generated":"2026-11-21T00:20:52+00:00","generated_displa
   /* ---------------- render ---------------- */
 
   function renderHead() {
-    $("#guildTag").textContent = (C.guildName || "Your Guild") + " \u00b7 WoW Forever \u00b7 fishing + cooking";
+    var titleEl = document.getElementById("boardTitle");
+    if (titleEl && C.guildName) titleEl.textContent = C.guildName;
+    $("#guildTag").textContent = C.tagline || "WoW Forever \u00b7 fishing + cooking";
     $("#marketLabel").textContent = D.market || (C.market || "");
     var h = ageHours();
     $("#stamp").textContent = "Scanned " + (D.generated_display || "\u2014") +

@@ -2,6 +2,8 @@ name: Refresh prices
 
 # Free on GitHub: scheduled runs + Pages hosting need no paid plan for public repos.
 on:
+  push:
+    branches: [main]         # deploy immediately when the site itself changes
   schedule:
     # Every 2 hours, offset off the hour to be kind to the source.
     - cron: "17 */2 * * *"

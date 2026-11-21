@@ -217,7 +217,9 @@
   /* ---------------- render ---------------- */
 
   function renderHead() {
-    $("#guildTag").textContent = (C.guildName || "Your Guild") + " \u00b7 WoW Forever \u00b7 fishing + cooking";
+    var titleEl = document.getElementById("boardTitle");
+    if (titleEl && C.guildName) titleEl.textContent = C.guildName;
+    $("#guildTag").textContent = C.tagline || "WoW Forever \u00b7 fishing + cooking";
     $("#marketLabel").textContent = D.market || (C.market || "");
     var h = ageHours();
     $("#stamp").textContent = "Scanned " + (D.generated_display || "\u2014") +

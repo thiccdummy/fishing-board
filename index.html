@@ -3,19 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guild Fishing Board — WoW Forever</title>
-<meta name="description" content="Fishing and cooking profit board for World of Warcraft Forever, built from ForeverEcon price scans.">
+<title>Hench 4 Life — Fishing Board | WoW Forever</title>
+<meta name="description" content="Hench 4 Life: the Monarch's fishing and cooking profit board for World of Warcraft Forever, built from ForeverEcon price scans.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <header class="top">
   <div class="brand">
-    <span class="pulse" id="pulse" title="Data loaded"></span>
+    <svg class="butterfly" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+      <path class="wing" d="M30 31C24 19 10 11 2 17c-7 5-4 19 6 24 8 4 17 1 22-8z"/>
+      <path class="wing" d="M34 31c6-12 20-20 28-14 7 5 4 19-6 24-8 4-17 1-22-8z"/>
+      <path class="wing low" d="M31 35c-4 9-12 16-19 13-6-3-5-11 2-15 6-4 12-2 17 2z"/>
+      <path class="wing low" d="M33 35c4 9 12 16 19 13 6-3 5-11-2-15-6-4-12-2-17 2z"/>
+      <ellipse class="body" cx="32" cy="32" rx="1.8" ry="9"/>
+      <path class="antenna" d="M31 23c-1-5-4-8-7-9M33 23c1-5 4-8 7-9"/>
+    </svg>
     <div>
-      <h1>Guild Fishing Board</h1>
-      <p class="sub" id="guildTag">WoW Forever · fishing + cooking</p>
+      <h1 id="boardTitle">Hench 4 Life</h1>
+      <p class="sub" id="guildTag">The Monarch's fishing board · WoW Forever</p>
     </div>
+    <span class="pulse" id="pulse" title="Data loaded"></span>
   </div>
   <div class="meta">
     <strong id="marketLabel">Normal Alliance US</strong>
@@ -123,6 +131,7 @@
       Zone loot and skill requirements are original-game data, not re-verified in Forever.
       No drop rates are published anywhere, so this board never invents gold-per-hour.
     </p>
+    <p class="motto">Henchmen, not minions.</p>
     <p id="buildInfo"></p>
   </footer>
 </main>

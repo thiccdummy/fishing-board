@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-21T00:30:34+00:00",
-  "generated_display": "Nov 21, 2026 00:30 UTC",
+  "generated": "2026-11-21T00:34:07+00:00",
+  "generated_display": "Nov 21, 2026 00:34 UTC",
   "market": "Normal Alliance US",
   "source": "https://foreverecon.com",
   "source_note": "Prices from AHledger player scans via ForeverEcon. Unofficial.",
@@ -457,8 +457,8 @@
       "slug": "i-small-lustrous-pearl",
       "url": "https://foreverecon.com/item/i-small-lustrous-pearl",
       "price": 630,
-      "buyout": 240,
-      "listed": 874,
+      "buyout": 210,
+      "listed": 931,
       "sold": 1218,
       "trend": null,
       "fetched": true

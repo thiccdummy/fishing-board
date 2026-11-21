@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-21T00:26:36+00:00",
-  "generated_display": "Nov 21, 2026 00:26 UTC",
+  "generated": "2026-11-21T00:28:17+00:00",
+  "generated_display": "Nov 21, 2026 00:28 UTC",
   "market": "Normal Alliance US",
   "source": "https://foreverecon.com",
   "source_note": "Prices from AHledger player scans via ForeverEcon. Unofficial.",
@@ -23,7 +23,7 @@
       "url": "https://foreverecon.com/item/i-darkclaw-lobster",
       "price": 880,
       "buyout": 880,
-      "listed": 814,
+      "listed": 795,
       "sold": 1028,
       "trend": null,
       "fetched": true
@@ -40,11 +40,11 @@
       ],
       "slug": "i-raw-whitescale-salmon",
       "url": "https://foreverecon.com/item/i-raw-whitescale-salmon",
-      "price": 680,
+      "price": 660,
       "buyout": 660,
-      "listed": 1625,
+      "listed": 2490,
       "sold": 1504,
-      "trend": -20.7,
+      "trend": 0.0,
       "fetched": true
     },
     "sunscale-salmon": {
@@ -63,9 +63,9 @@
       "url": "https://foreverecon.com/item/i-raw-sunscale-salmon",
       "price": 190,
       "buyout": 180,
-      "listed": 1759,
+      "listed": 2153,
       "sold": 3050,
-      "trend": -30.4,
+      "trend": -16.0,
       "fetched": true
     },
     "nightfin-snapper": {
@@ -83,11 +83,11 @@
       ],
       "slug": "raw-nightfin-snapper",
       "url": "https://foreverecon.com/item/raw-nightfin-snapper",
-      "price": 360,
-      "buyout": 290,
-      "listed": 1545,
+      "price": 370,
+      "buyout": 300,
+      "listed": 1452,
       "sold": 1968,
-      "trend": -9.2,
+      "trend": 0.0,
       "fetched": true
     },
     "winter-squid": {
@@ -102,11 +102,11 @@
       ],
       "slug": "winter-squid",
       "url": "https://foreverecon.com/item/winter-squid",
-      "price": 300,
-      "buyout": 230,
-      "listed": 1751,
+      "price": 200,
+      "buyout": 170,
+      "listed": 3228,
       "sold": 4819,
-      "trend": -41.2,
+      "trend": -55.5,
       "fetched": true
     },
     "stonescale-eel": {
@@ -124,10 +124,10 @@
       "slug": "i-stonescale-eel",
       "url": "https://foreverecon.com/item/i-stonescale-eel",
       "price": 180,
-      "buyout": 140,
-      "listed": 3653,
+      "buyout": 160,
+      "listed": 3001,
       "sold": 12359,
-      "trend": -11.9,
+      "trend": -8.8,
       "fetched": true
     },
     "glossy-mightfish": {
@@ -143,11 +143,11 @@
       ],
       "slug": "i-raw-glossy-mightfish",
       "url": "https://foreverecon.com/item/i-raw-glossy-mightfish",
-      "price": 87,
-      "buyout": 45,
-      "listed": 4416,
+      "price": 62,
+      "buyout": 39,
+      "listed": 4773,
       "sold": 3214,
-      "trend": -54.5,
+      "trend": -56.3,
       "fetched": true
     },
     "spotted-yellowtail": {
@@ -164,11 +164,11 @@
       ],
       "slug": "i-raw-spotted-yellowtail",
       "url": "https://foreverecon.com/item/i-raw-spotted-yellowtail",
-      "price": 44,
-      "buyout": 34,
-      "listed": 4102,
+      "price": 35,
+      "buyout": 23,
+      "listed": 8694,
       "sold": 7392,
-      "trend": -43.6,
+      "trend": -49.3,
       "fetched": true
     },
     "mithril-head-trout": {
@@ -186,11 +186,11 @@
       ],
       "slug": "i-mithril-head-trout",
       "url": "https://foreverecon.com/item/i-mithril-head-trout",
-      "price": 80,
-      "buyout": 77,
-      "listed": 1050,
+      "price": 79,
+      "buyout": 76,
+      "listed": 1463,
       "sold": 2629,
-      "trend": -1.2,
+      "trend": 0.0,
       "fetched": true
     },
     "deviate-fish": {
@@ -204,11 +204,11 @@
       ],
       "slug": "i-deviate-fish",
       "url": "https://foreverecon.com/item/i-deviate-fish",
-      "price": 270,
-      "buyout": 270,
-      "listed": 538,
+      "price": 1000,
+      "buyout": 260,
+      "listed": 374,
       "sold": 2361,
-      "trend": -2.9,
+      "trend": null,
       "fetched": true
     },
     "greater-sagefish": {
@@ -225,11 +225,11 @@
       ],
       "slug": "i-raw-greater-sagefish",
       "url": "https://foreverecon.com/item/i-raw-greater-sagefish",
-      "price": 150,
-      "buyout": 140,
-      "listed": 881,
+      "price": 140,
+      "buyout": 120,
+      "listed": 805,
       "sold": 1568,
-      "trend": -9.1,
+      "trend": -12.1,
       "fetched": true
     },
     "spinefin-halibut": {
@@ -245,8 +245,8 @@
       "slug": "i-raw-spinefin-halibut",
       "url": "https://foreverecon.com/item/i-raw-spinefin-halibut",
       "price": 300,
-      "buyout": 300,
-      "listed": 62,
+      "buyout": 280,
+      "listed": 178,
       "sold": 167,
       "trend": null,
       "fetched": true
@@ -267,10 +267,10 @@
       "slug": "i-firefin-snapper",
       "url": "https://foreverecon.com/item/i-firefin-snapper",
       "price": 20,
-      "buyout": 9,
-      "listed": 6691,
+      "buyout": 12,
+      "listed": 6152,
       "sold": 11200,
-      "trend": -58.3,
+      "trend": -50.0,
       "fetched": true
     },
     "oily-blackmouth": {
@@ -288,11 +288,11 @@
       ],
       "slug": "i-oily-blackmouth",
       "url": "https://foreverecon.com/item/i-oily-blackmouth",
-      "price": 63,
-      "buyout": 30,
-      "listed": 2656,
+      "price": 57,
+      "buyout": 38,
+      "listed": 3937,
       "sold": 9811,
-      "trend": -28.4,
+      "trend": -35.2,
       "fetched": true
     },
     "redgill": {
@@ -309,10 +309,10 @@
       "slug": "i-raw-redgill",
       "url": "https://foreverecon.com/item/i-raw-redgill",
       "price": 13,
-      "buyout": 9,
-      "listed": 2489,
+      "buyout": 8,
+      "listed": 3418,
       "sold": 3878,
-      "trend": -81.4,
+      "trend": -70.5,
       "fetched": true
     },
     "sagefish": {
@@ -330,11 +330,11 @@
       ],
       "slug": "i-raw-sagefish",
       "url": "https://foreverecon.com/item/i-raw-sagefish",
-      "price": 72,
+      "price": 65,
       "buyout": 50,
-      "listed": 1185,
+      "listed": 1110,
       "sold": 2410,
-      "trend": -14.3,
+      "trend": -12.2,
       "fetched": true
     },
     "plated-armorfish": {
@@ -352,10 +352,10 @@
       "slug": "i-raw-plated-armorfish",
       "url": "https://foreverecon.com/item/i-raw-plated-armorfish",
       "price": 74,
-      "buyout": 72,
-      "listed": 980,
+      "buyout": 71,
+      "listed": 903,
       "sold": 179,
-      "trend": -65.7,
+      "trend": -63.9,
       "fetched": true
     },
     "summer-bass": {
@@ -393,11 +393,11 @@
       ],
       "slug": "golden-pearl",
       "url": "https://foreverecon.com/item/golden-pearl",
-      "price": 18000,
-      "buyout": 14000,
-      "listed": 211,
+      "price": 14000,
+      "buyout": 12000,
+      "listed": 277,
       "sold": 410,
-      "trend": -14.4,
+      "trend": -21.7,
       "fetched": true
     },
     "black-pearl": {
@@ -414,11 +414,11 @@
       ],
       "slug": "i-black-pearl",
       "url": "https://foreverecon.com/item/i-black-pearl",
-      "price": 1800,
-      "buyout": 1200,
-      "listed": 778,
+      "price": 1400,
+      "buyout": 1100,
+      "listed": 1013,
       "sold": 649,
-      "trend": -5.7,
+      "trend": -23.5,
       "fetched": true
     },
     "iridescent-pearl": {
@@ -436,10 +436,10 @@
       "slug": "i-iridescent-pearl",
       "url": "https://foreverecon.com/item/i-iridescent-pearl",
       "price": 790,
-      "buyout": 790,
-      "listed": 287,
+      "buyout": 780,
+      "listed": 189,
       "sold": 566,
-      "trend": -28.2,
+      "trend": -16.4,
       "fetched": true
     },
     "small-lustrous-pearl": {
@@ -474,11 +474,11 @@
       ],
       "slug": "i-zesty-clam-meat",
       "url": "https://foreverecon.com/item/i-zesty-clam-meat",
-      "price": 70,
+      "price": 68,
       "buyout": 60,
-      "listed": 2787,
+      "listed": 2814,
       "sold": 3857,
-      "trend": -24.7,
+      "trend": -22.7,
       "fetched": true
     },
     "tangy-clam-meat": {
@@ -493,8 +493,8 @@
       "slug": "i-tangy-clam-meat",
       "url": "https://foreverecon.com/item/i-tangy-clam-meat",
       "price": 60,
-      "buyout": 43,
-      "listed": 1644,
+      "buyout": 52,
+      "listed": 2006,
       "sold": 11650,
       "trend": -14.3,
       "fetched": true
@@ -510,11 +510,11 @@
       ],
       "slug": "i-clam-meat",
       "url": "https://foreverecon.com/item/i-clam-meat",
-      "price": 42,
-      "buyout": 35,
-      "listed": 998,
+      "price": 48,
+      "buyout": 25,
+      "listed": 892,
       "sold": 5936,
-      "trend": -16.0,
+      "trend": -4.0,
       "fetched": true
     },
     "giant-clam-meat": {
@@ -528,9 +528,9 @@
       "url": "https://foreverecon.com/item/i-giant-clam-meat",
       "price": 440,
       "buyout": 380,
-      "listed": 493,
+      "listed": 490,
       "sold": 563,
-      "trend": -11.9,
+      "trend": -8.8,
       "fetched": true
     },
     "lobster-stew": {
@@ -539,11 +539,11 @@
       "kind": "cooked",
       "slug": "i-lobster-stew",
       "url": "https://foreverecon.com/item/i-lobster-stew",
-      "price": 840,
+      "price": 850,
       "buyout": 840,
-      "listed": 815,
+      "listed": 649,
       "sold": 545,
-      "trend": -30.6,
+      "trend": -25.9,
       "fetched": true
     },
     "baked-salmon": {
@@ -554,9 +554,9 @@
       "url": "https://foreverecon.com/item/i-baked-salmon",
       "price": 990,
       "buyout": 990,
-      "listed": 883,
+      "listed": 1151,
       "sold": 942,
-      "trend": -34.4,
+      "trend": -24.4,
       "fetched": true
     },
     "cooked-yellowtail": {
@@ -565,11 +565,11 @@
       "kind": "cooked",
       "slug": "i-spotted-yellowtail",
       "url": "https://foreverecon.com/item/i-spotted-yellowtail",
-      "price": 88,
-      "buyout": 62,
-      "listed": null,
+      "price": 80,
+      "buyout": 47,
+      "listed": 8104,
       "sold": 3843,
-      "trend": -2.2,
+      "trend": 0.0,
       "fetched": true
     },
     "poached-sunscale": {
@@ -580,9 +580,9 @@
       "url": "https://foreverecon.com/item/i-poached-sunscale-salmon",
       "price": 320,
       "buyout": 320,
-      "listed": 74,
+      "listed": 1314,
       "sold": 581,
-      "trend": -48.6,
+      "trend": -45.6,
       "fetched": true
     },
     "cooked-mightfish": {
@@ -591,11 +591,11 @@
       "kind": "cooked",
       "slug": "i-cooked-glossy-mightfish",
       "url": "https://foreverecon.com/item/i-cooked-glossy-mightfish",
-      "price": 290,
+      "price": 280,
       "buyout": 220,
-      "listed": 2299,
+      "listed": 2624,
       "sold": 617,
-      "trend": -41.8,
+      "trend": -29.7,
       "fetched": true
     },
     "cooked-halibut": {
@@ -606,7 +606,7 @@
       "url": "https://foreverecon.com/item/i-spinefin-halibut",
       "price": 6500,
       "buyout": 6500,
-      "listed": 25,
+      "listed": 13,
       "sold": 7,
       "trend": 0.0,
       "fetched": true
@@ -643,11 +643,11 @@
       "kind": "cooked",
       "slug": "i-sagefish-delight",
       "url": "https://foreverecon.com/item/i-sagefish-delight",
-      "price": 160,
+      "price": 150,
       "buyout": 150,
-      "listed": 525,
+      "listed": 673,
       "sold": 875,
-      "trend": -17.6,
+      "trend": -13.5,
       "fetched": true
     },
     "soothing-spices": {
@@ -658,9 +658,9 @@
       "url": "https://foreverecon.com/item/soothing-spices",
       "price": 170,
       "buyout": 170,
-      "listed": 1025,
+      "listed": 692,
       "sold": 1449,
-      "trend": -9.6,
+      "trend": -7.1,
       "fetched": true
     },
     "spring-water": {
@@ -671,9 +671,9 @@
       "url": "https://foreverecon.com/item/refreshing-spring-water",
       "price": 8,
       "buyout": 8,
-      "listed": 1501,
+      "listed": 2309,
       "sold": 2333,
-      "trend": -27.3,
+      "trend": -11.1,
       "fetched": true
     },
     "stonescale-oil": {
@@ -684,7 +684,7 @@
       "url": "https://foreverecon.com/item/stonescale-oil",
       "price": 150,
       "buyout": 140,
-      "listed": 1889,
+      "listed": 2389,
       "sold": 1932,
       "trend": -66.7,
       "fetched": true

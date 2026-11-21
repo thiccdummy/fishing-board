@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-21T00:34:07+00:00",
-  "generated_display": "Nov 21, 2026 00:34 UTC",
+  "generated": "2026-11-21T00:45:58+00:00",
+  "generated_display": "Nov 21, 2026 00:45 UTC",
   "market": "Normal Alliance US",
   "source": "https://foreverecon.com",
   "source_note": "Prices from AHledger player scans via ForeverEcon. Unofficial.",
@@ -26,6 +26,7 @@
       "listed": 795,
       "sold": 1028,
       "trend": null,
+      "vendor": 12,
       "fetched": true
     },
     "whitescale-salmon": {
@@ -45,6 +46,7 @@
       "listed": 2490,
       "sold": 1504,
       "trend": 0.0,
+      "vendor": 5,
       "fetched": true
     },
     "sunscale-salmon": {
@@ -66,6 +68,7 @@
       "listed": 2153,
       "sold": 3050,
       "trend": -16.0,
+      "vendor": 10,
       "fetched": true
     },
     "nightfin-snapper": {
@@ -88,6 +91,7 @@
       "listed": 1452,
       "sold": 1968,
       "trend": 0.0,
+      "vendor": 10,
       "fetched": true
     },
     "winter-squid": {
@@ -107,6 +111,7 @@
       "listed": 3228,
       "sold": 4819,
       "trend": -55.5,
+      "vendor": null,
       "fetched": true
     },
     "stonescale-eel": {
@@ -128,6 +133,7 @@
       "listed": 3001,
       "sold": 12359,
       "trend": -8.8,
+      "vendor": 10,
       "fetched": true
     },
     "glossy-mightfish": {
@@ -148,6 +154,7 @@
       "listed": 4773,
       "sold": 3214,
       "trend": -56.3,
+      "vendor": 6,
       "fetched": true
     },
     "spotted-yellowtail": {
@@ -169,6 +176,7 @@
       "listed": 8694,
       "sold": 7392,
       "trend": -49.3,
+      "vendor": 4,
       "fetched": true
     },
     "mithril-head-trout": {
@@ -191,6 +199,7 @@
       "listed": 1463,
       "sold": 2629,
       "trend": 0.0,
+      "vendor": 6,
       "fetched": true
     },
     "deviate-fish": {
@@ -209,6 +218,7 @@
       "listed": 374,
       "sold": 2361,
       "trend": null,
+      "vendor": 4,
       "fetched": true
     },
     "greater-sagefish": {
@@ -230,6 +240,7 @@
       "listed": 805,
       "sold": 1568,
       "trend": -12.1,
+      "vendor": 125,
       "fetched": true
     },
     "spinefin-halibut": {
@@ -249,6 +260,7 @@
       "listed": 178,
       "sold": 167,
       "trend": null,
+      "vendor": 160,
       "fetched": true
     },
     "firefin-snapper": {
@@ -271,6 +283,7 @@
       "listed": 6152,
       "sold": 11200,
       "trend": -50.0,
+      "vendor": 5,
       "fetched": true
     },
     "oily-blackmouth": {
@@ -293,6 +306,7 @@
       "listed": 3937,
       "sold": 9811,
       "trend": -35.2,
+      "vendor": 4,
       "fetched": true
     },
     "redgill": {
@@ -313,6 +327,7 @@
       "listed": 3418,
       "sold": 3878,
       "trend": -70.5,
+      "vendor": 4,
       "fetched": true
     },
     "sagefish": {
@@ -335,6 +350,7 @@
       "listed": 1110,
       "sold": 2410,
       "trend": -12.2,
+      "vendor": 25,
       "fetched": true
     },
     "plated-armorfish": {
@@ -356,6 +372,7 @@
       "listed": 903,
       "sold": 179,
       "trend": -63.9,
+      "vendor": 70,
       "fetched": true
     },
     "summer-bass": {
@@ -377,6 +394,7 @@
       "listed": null,
       "sold": null,
       "trend": null,
+      "vendor": 9,
       "fetched": true
     },
     "golden-pearl": {
@@ -398,6 +416,7 @@
       "listed": 277,
       "sold": 410,
       "trend": -21.7,
+      "vendor": 10000,
       "fetched": true
     },
     "black-pearl": {
@@ -419,6 +438,7 @@
       "listed": 1013,
       "sold": 649,
       "trend": -23.5,
+      "vendor": 1000,
       "fetched": true
     },
     "iridescent-pearl": {
@@ -440,6 +460,7 @@
       "listed": 189,
       "sold": 566,
       "trend": -16.4,
+      "vendor": 750,
       "fetched": true
     },
     "small-lustrous-pearl": {
@@ -461,6 +482,7 @@
       "listed": 931,
       "sold": 1218,
       "trend": null,
+      "vendor": 200,
       "fetched": true
     },
     "zesty-clam-meat": {
@@ -479,6 +501,7 @@
       "listed": 2814,
       "sold": 3857,
       "trend": -22.7,
+      "vendor": 50,
       "fetched": true
     },
     "tangy-clam-meat": {
@@ -497,6 +520,7 @@
       "listed": 2006,
       "sold": 11650,
       "trend": -14.3,
+      "vendor": 22,
       "fetched": true
     },
     "clam-meat": {
@@ -515,6 +539,7 @@
       "listed": 892,
       "sold": 5936,
       "trend": -4.0,
+      "vendor": 16,
       "fetched": true
     },
     "giant-clam-meat": {
@@ -531,6 +556,7 @@
       "listed": 490,
       "sold": 563,
       "trend": -8.8,
+      "vendor": 71,
       "fetched": true
     },
     "lobster-stew": {
@@ -544,6 +570,7 @@
       "listed": 649,
       "sold": 545,
       "trend": -25.9,
+      "vendor": 14,
       "fetched": true
     },
     "baked-salmon": {
@@ -557,6 +584,7 @@
       "listed": 1151,
       "sold": 942,
       "trend": -24.4,
+      "vendor": 10,
       "fetched": true
     },
     "cooked-yellowtail": {
@@ -570,6 +598,7 @@
       "listed": 8104,
       "sold": 3843,
       "trend": 0.0,
+      "vendor": 5,
       "fetched": true
     },
     "poached-sunscale": {
@@ -583,6 +612,7 @@
       "listed": 1314,
       "sold": 581,
       "trend": -45.6,
+      "vendor": 12,
       "fetched": true
     },
     "cooked-mightfish": {
@@ -596,6 +626,7 @@
       "listed": 2624,
       "sold": 617,
       "trend": -29.7,
+      "vendor": 8,
       "fetched": true
     },
     "cooked-halibut": {
@@ -609,6 +640,7 @@
       "listed": 13,
       "sold": 7,
       "trend": 0.0,
+      "vendor": 200,
       "fetched": true
     },
     "grilled-squid": {
@@ -622,6 +654,7 @@
       "listed": null,
       "sold": null,
       "trend": null,
+      "vendor": 8,
       "fetched": true
     },
     "nightfin-soup": {
@@ -635,6 +668,7 @@
       "listed": null,
       "sold": null,
       "trend": null,
+      "vendor": 12,
       "fetched": true
     },
     "sagefish-delight": {
@@ -648,6 +682,7 @@
       "listed": 673,
       "sold": 875,
       "trend": -13.5,
+      "vendor": 125,
       "fetched": true
     },
     "soothing-spices": {
@@ -661,6 +696,7 @@
       "listed": 692,
       "sold": 1449,
       "trend": -7.1,
+      "vendor": 40,
       "fetched": true
     },
     "spring-water": {
@@ -674,6 +710,7 @@
       "listed": 2309,
       "sold": 2333,
       "trend": -11.1,
+      "vendor": 1,
       "fetched": true
     },
     "stonescale-oil": {
@@ -687,6 +724,7 @@
       "listed": 2389,
       "sold": 1932,
       "trend": -66.7,
+      "vendor": 125,
       "fetched": true
     }
   },

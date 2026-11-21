@@ -72,6 +72,9 @@ def main() -> int:
     with zipfile.ZipFile(ZIP, "w", zipfile.ZIP_DEFLATED) as z:
         z.write(ROOT / "index.html", "fishing-board/index.html")
         for f in sorted((ROOT / "assets").glob("*")):
+            # og.png is only used by link previews; keep the editable zip small.
+            if f.suffix == ".png":
+                continue
             z.write(f, f"fishing-board/assets/{f.name}")
         z.write(ROOT / "README.md", "fishing-board/README.md")
 

@@ -111,6 +111,16 @@ PY
 
 ---
 
+## Link previews (Discord / Slack)
+
+`assets/og.png` is the 1200×630 card Discord shows when someone pastes the link. It is generated from `design/og-card.html` (kept out of the published site) and referenced by absolute URL in `index.html`.
+
+To change the card: edit `design/og-card.html`, open it in a browser at least 1200 px wide, take a full-page screenshot at 1200×630, save it over `assets/og.png`, then bump `?v=1` to `?v=2` in both `og:image` and `twitter:image`. Crawlers cache images by URL, so the bump is what makes them refetch.
+
+Discord also caches the whole embed per page URL. If the plain link is already sitting in a channel, paste it again with a query on the end (`…/fishing-board/?v=2`) to force a fresh preview.
+
+---
+
 ## How "live" this actually is (honest version)
 
 | | |

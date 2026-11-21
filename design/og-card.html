@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hench 4 Life — Open Graph card</title>
+<!--
+  Source for assets/og.png. Not part of the published site.
+  Capture the #card element at 1200x630 (see README → "Preview card").
+-->
+<style>
+  html, body { margin: 0; padding: 0; background: #0b0611; }
+  * { box-sizing: border-box; }
+
+  #card {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    padding: 54px 64px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background:
+      radial-gradient(900px 520px at 6% -22%, #3d1556 0%, transparent 60%),
+      radial-gradient(820px 480px at 104% -14%, #4b1f05 0%, transparent 58%),
+      #0b0611;
+    color: #f5ecf8;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+
+
+  .top { display: flex; align-items: center; gap: 22px; }
+  .mark { width: 78px; height: 78px; flex: 0 0 auto; filter: drop-shadow(0 0 26px rgba(255, 138, 31, .35)); }
+  .mark .wing { fill: #ffb52e; }
+  .mark .low { fill: #ff8a1f; }
+  .mark .body { fill: #2a1030; }
+  .mark .antenna { fill: none; stroke: #ffb52e; stroke-width: 1.4; stroke-linecap: round; }
+
+  .guild {
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .sub {
+    margin-top: 10px;
+    font-size: 23px;
+    letter-spacing: .3px;
+    color: #b79bc8;
+  }
+
+  .mid { display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; }
+
+  h2 {
+    margin: 0;
+    font-size: 45px;
+    font-weight: 750;
+    line-height: 1.16;
+    letter-spacing: -.6px;
+    max-width: 660px;
+  }
+  h2 .accent { color: #ffb52e; }
+
+  .legend {
+    width: 372px;
+    flex: 0 0 auto;
+    border-left: 1px solid #3a2150;
+    padding-left: 30px;
+    display: grid;
+    gap: 18px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 116px 1fr;
+    align-items: center;
+    gap: 14px;
+    font-size: 17px;
+    line-height: 1.25;
+    color: #b79bc8;
+  }
+
+  .chip {
+    display: inline-block;
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .chip.gold { background: linear-gradient(180deg, #ffc65a, #ffa41f); color: #1a1200; }
+  .chip.green { background: #7fe0a0; color: #04200f; }
+  .chip.red { background: #ff6f7d; color: #2b0508; }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-top: 1px solid rgba(255, 181, 46, .28);
+    padding-top: 22px;
+    font-size: 18px;
+    color: #b79bc8;
+  }
+  .pills { display: flex; gap: 10px; }
+  .pills span {
+    border: 1px solid #3a2150;
+    border-radius: 999px;
+    padding: 6px 14px;
+    background: rgba(23, 12, 32, .8);
+  }
+  .url { color: #ffb52e; font-weight: 650; letter-spacing: .3px; }
+</style>
+</head>
+<body>
+<div id="card">
+
+  <div class="top">
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+      <path class="wing" d="M30 31C24 19 10 11 2 17c-7 5-4 19 6 24 8 4 17 1 22-8z"/>
+      <path class="wing" d="M34 31c6-12 20-20 28-14 7 5 4 19-6 24-8 4-17 1-22-8z"/>
+      <path class="low" d="M31 35c-4 9-12 16-19 13-6-3-5-11 2-15 6-4 12-2 17 2z"/>
+      <path class="low" d="M33 35c4 9 12 16 19 13 6-3 5-11-2-15-6-4-12-2-17 2z"/>
+      <ellipse class="body" cx="32" cy="32" rx="1.8" ry="9"/>
+      <path class="antenna" d="M31 23c-1-5-4-8-7-9M33 23c1-5 4-8 7-9"/>
+    </svg>
+    <div>
+      <div class="guild">Hench 4 Life</div>
+      <div class="sub">The Monarch's fishing board</div>
+    </div>
+  </div>
+
+  <div class="mid">
+    <h2>Live WoW Forever prices.<br>What to catch, where,<br><span class="accent">and whether to cook it.</span></h2>
+
+    <div class="legend">
+      <div class="row"><span class="chip gold">CORE</span><span>high value, durable demand</span></div>
+      <div class="row"><span class="chip green">STRONG</span><span>good margin, thinner market</span></div>
+      <div class="row"><span class="chip red">AVOID</span><span>cooks for less than it sells</span></div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="pills">
+      <span>WoW Forever</span>
+      <span>Normal Alliance US</span>
+      <span>refreshed every 2 hours</span>
+    </div>
+    <div class="url">thiccdummy.github.io/fishing-board</div>
+  </div>
+</div>
+</body>
+</html>

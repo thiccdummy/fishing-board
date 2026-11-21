@@ -137,6 +137,8 @@ Discord also caches the whole embed per page URL. If the plain link is already s
 
 - **Net / unit** = cooked buyout − auction cut − spices/water you must buy. Your fishing time
   is not charged, because nobody can price it without drop rates.
+- **Vendor** = what an NPC vendor pays for one. No cut and no waiting, so it is the floor under
+  every price here — and for junk fish it can beat the auction house after the cut.
 - **Market / day** = buyout × sold/day × (1 − cut). It is pooled across **every realm** in the
   market, so it is a regional ceiling shared by all sellers — not your income.
 - **No gold-per-hour anywhere.** ForeverEcon explicitly refuses to publish expected value per

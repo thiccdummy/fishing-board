@@ -144,6 +144,7 @@
         zones: zoneList(inputs.map(function (i) { return i[0]; })),
         skill: primary.skill,
         raw: primary.buyout,
+        vendor: primary.vendor,
         cooked: cookedPrice,
         fate: fate,
         net: net,
@@ -176,6 +177,7 @@
         zones: it.zones || [],
         skill: it.skill,
         raw: it.buyout,
+        vendor: it.vendor,
         cooked: null,
         fate: '<span class="dim">Sell raw</span>',
         net: net,
@@ -285,7 +287,7 @@
 
     var body = $("#plays").querySelector("tbody");
     if (!rows.length) {
-      body.innerHTML = '<tr><td colspan="10" class="dim" style="padding:22px">' +
+      body.innerHTML = '<tr><td colspan="11" class="dim" style="padding:22px">' +
         "Nothing matches those filters.</td></tr>";
       return;
     }
@@ -308,6 +310,8 @@
         '<td class="l where">' + where + "</td>" +
         '<td class="r">' + skill + "</td>" +
         '<td class="r money">' + money(p.raw) + "</td>" +
+        '<td class="r money dim" title="What a vendor pays per unit (client data, no auction cut)">' +
+          money(p.vendor) + "</td>" +
         '<td class="l fate">' + p.fate + "</td>" +
         '<td class="r money">' + money(p.cooked) + "</td>" +
         '<td class="r money ' + netCls + '">' + signedMoney(p.net) + "</td>" +

@@ -295,6 +295,8 @@ def scrape(slug: str) -> dict:
         "listed": find_value(lines, "Listed", "int"),
         "sold": find_value(lines, "Est. sold / day", "int"),
         "trend": find_value(lines, "vs 7D avg", "pct"),
+        # Client item table: what a vendor pays for one. Static, and no auction cut.
+        "vendor": find_value(lines, "Vendor sells for", "money"),
     }
 
 
@@ -333,16 +335,20 @@ def main() -> int:
                 row["price"] = prev[key].get("price")
                 row["price_carried"] = True
             row["fetched"] = True
+            if not isinstance(row.get("vendor"), (int, float)) and \
+                    isinstance(prev.get(key, {}).get("vendor"), (int, float)):
+                row["vendor"] = prev[key]["vendor"]
             flag = "" if price_ok else "  (no price listed)"
             print(f"[{idx:2}/{len(CATALOG)}] {row['name']:<28} "
-                  f"price={row['price']} buyout={row['buyout']} sold={row['sold']}{flag}")
+                  f"price={row['price']} buyout={row['buyout']} sold={row['sold']} "
+                  f"vendor={row.get('vendor')}{flag}")
         except Exception as exc:                       # noqa: BLE001
             failures += 1
             print(f"[{idx:2}/{len(CATALOG)}] {item['name']:<28} FAILED: {exc}", file=sys.stderr)
             row["fetched"] = False
             if key in prev:
                 row.update({k: prev[key].get(k) for k in
-                            ("price", "buyout", "listed", "sold", "trend")})
+                            ("price", "buyout", "listed", "sold", "trend", "vendor")})
                 row["price_carried"] = True
         items[key] = row
         time.sleep(DELAY)

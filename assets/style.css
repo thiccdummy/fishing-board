@@ -408,14 +408,15 @@ footer p { margin: 4px 0; }
   tbody td { padding: 9px 8px; }
 }
 
-/* Tablet / narrow laptop: drop Cooked and Market/day, tighten the rest so the verdict stays visible */
+/* Tablet / narrow laptop: drop Cooked, Vendor and Market/day, tighten the rest so the verdict stays visible */
 @media (max-width: 980px) {
   table { min-width: 540px; }
   .fate { white-space: normal; min-width: 104px; }
   .where { max-width: 118px; }
   tbody td { padding: 9px 7px; }
-  #plays th:nth-child(6), #plays td:nth-child(6),
-  #plays th:nth-child(9), #plays td:nth-child(9) { display: none; }
+  #plays th:nth-child(5), #plays td:nth-child(5),
+  #plays th:nth-child(7), #plays td:nth-child(7),
+  #plays th:nth-child(10), #plays td:nth-child(10) { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

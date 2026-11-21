@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-21T00:20:52+00:00",
-  "generated_display": "Nov 21, 2026 00:20 UTC",
+  "generated": "2026-11-21T00:26:36+00:00",
+  "generated_display": "Nov 21, 2026 00:26 UTC",
   "market": "Normal Alliance US",
   "source": "https://foreverecon.com",
   "source_note": "Prices from AHledger player scans via ForeverEcon. Unofficial.",
@@ -189,8 +189,8 @@
       "price": 80,
       "buyout": 77,
       "listed": 1050,
-      "sold": 2558,
-      "trend": -2.4,
+      "sold": 2629,
+      "trend": -1.2,
       "fetched": true
     },
     "deviate-fish": {
@@ -578,11 +578,11 @@
       "kind": "cooked",
       "slug": "i-poached-sunscale-salmon",
       "url": "https://foreverecon.com/item/i-poached-sunscale-salmon",
-      "price": 330,
+      "price": 320,
       "buyout": 320,
-      "listed": 990,
-      "sold": 505,
-      "trend": -47.9,
+      "listed": 74,
+      "sold": 581,
+      "trend": -48.6,
       "fetched": true
     },
     "cooked-mightfish": {
@@ -591,11 +591,11 @@
       "kind": "cooked",
       "slug": "i-cooked-glossy-mightfish",
       "url": "https://foreverecon.com/item/i-cooked-glossy-mightfish",
-      "price": 280,
+      "price": 290,
       "buyout": 220,
-      "listed": 3796,
-      "sold": 607,
-      "trend": -44.8,
+      "listed": 2299,
+      "sold": 617,
+      "trend": -41.8,
       "fetched": true
     },
     "cooked-halibut": {
@@ -606,7 +606,7 @@
       "url": "https://foreverecon.com/item/i-spinefin-halibut",
       "price": 6500,
       "buyout": 6500,
-      "listed": 33,
+      "listed": 25,
       "sold": 7,
       "trend": 0.0,
       "fetched": true
@@ -645,8 +645,8 @@
       "url": "https://foreverecon.com/item/i-sagefish-delight",
       "price": 160,
       "buyout": 150,
-      "listed": 633,
-      "sold": 763,
+      "listed": 525,
+      "sold": 875,
       "trend": -17.6,
       "fetched": true
     },

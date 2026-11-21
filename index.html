@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guild Fishing Board — WoW Forever</title>
+<meta name="description" content="Fishing and cooking profit board for World of Warcraft Forever, built from ForeverEcon price scans.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <span class="pulse" id="pulse" title="Data loaded"></span>
+    <div>
+      <h1>Guild Fishing Board</h1>
+      <p class="sub" id="guildTag">WoW Forever · fishing + cooking</p>
+    </div>
+  </div>
+  <div class="meta">
+    <strong id="marketLabel">Normal Alliance US</strong>
+    <span id="stamp">loading…</span>
+  </div>
+</header>
+
+<div id="staleBanner" class="banner hidden"></div>
+
+<main>
+  <section class="kpis" id="kpis"></section>
+
+  <section class="controls" aria-label="Board controls">
+    <label>
+      <span>Assumption</span>
+      <select id="mode">
+        <option value="catch">I catch the fish</option>
+        <option value="buy">I buy the materials</option>
+      </select>
+    </label>
+    <label>
+      <span>Auction house</span>
+      <select id="cut">
+        <option value="5">Capital city (5% cut)</option>
+        <option value="15">Goblin house (15% cut)</option>
+      </select>
+    </label>
+    <label>
+      <span>Zone</span>
+      <select id="zone"><option value="">All zones</option></select>
+    </label>
+    <label>
+      <span>Sort by</span>
+      <select id="sort">
+        <option value="net">Gold per catch</option>
+        <option value="pool">Market size / day</option>
+        <option value="sold">Sold per day</option>
+        <option value="name">Name</option>
+      </select>
+    </label>
+    <label>
+      <span>Search</span>
+      <input id="search" type="search" placeholder="lobster, pearl, Tanaris…" autocomplete="off">
+    </label>
+    <label class="check">
+      <input id="hideIlliquid" type="checkbox" checked>
+      <span>Hide illiquid (&lt;25 sold/day)</span>
+    </label>
+    <button id="copyList" class="btn" type="button">Copy shopping list</button>
+  </section>
+
+  <p class="hint" id="modeHint"></p>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>What to fish, and what to do with it</h2>
+      <span class="count" id="rowCount"></span>
+    </div>
+    <div class="table-wrap">
+      <table id="plays">
+        <thead>
+          <tr>
+            <th class="l">Catch</th>
+            <th class="l">Where (Alliance side)</th>
+            <th class="r">Skill</th>
+            <th class="r">Raw</th>
+            <th class="l">Fate</th>
+            <th class="r">Cooked</th>
+            <th class="r">Net / unit</th>
+            <th class="r">Sold / day</th>
+            <th class="r">Market / day</th>
+            <th class="l">Verdict</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="fineprint">
+      Net / unit is after the auction cut and after any spices or water you must buy.
+      Market / day is <em>buyout × sold/day × (1 − cut)</em>, pooled across every realm in the
+      market — a ceiling for the whole region, not your income. Prices are a snapshot, not a live feed.
+    </p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Where to stand</h2>
+      <button class="btn ghost" id="toggleZones" type="button">Show all zones</button>
+    </div>
+    <div class="zones" id="zones"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>Traps worth knowing</h2></div>
+    <ul class="traps" id="traps"></ul>
+  </section>
+
+  <footer>
+    <p>
+      Built for a guild, from public numbers on
+      <a href="https://foreverecon.com/fishing" target="_blank" rel="noopener">ForeverEcon</a>,
+      whose prices come from AHledger player scans. Unofficial, unaffiliated with Blizzard.
+    </p>
+    <p>
+      Zone loot and skill requirements are original-game data, not re-verified in Forever.
+      No drop rates are published anywhere, so this board never invents gold-per-hour.
+    </p>
+    <p id="buildInfo"></p>
+  </footer>
+</main>
+
+<script src="assets/config.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

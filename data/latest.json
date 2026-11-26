@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-26T21:21:54+00:00",
-  "generated_display": "Nov 26, 2026 21:21 UTC",
+  "generated": "2026-11-26T21:40:01+00:00",
+  "generated_display": "Nov 26, 2026 21:40 UTC",
   "market": "Normal Alliance US",
   "source": "https://foreverecon.com",
   "source_note": "Prices from AHledger player scans via ForeverEcon. Unofficial.",
@@ -652,7 +652,7 @@
       "price": 5000,
       "buyout": 450,
       "listed": 278,
-      "sold": 663,
+      "sold": 674,
       "trend": null,
       "vendor": 8,
       "fetched": true
